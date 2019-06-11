@@ -8,12 +8,16 @@
 
 using namespace std;
 
+class Player; // forward declaration for compilation
+
+//enumerated types for the card
 enum Value {TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE};
 const QVector<QString> value_names = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
 
 enum Suit {CLUBS, DIAMONDS, SPADES, HEARTS};
 const QVector<QString> suit_names = {"Clubs", "Diamonds", "Spades", "Hearts"};
 
+/** @brief Card - class to hold enumerated types for the card suit and value */
 class Card
 {
 public:
@@ -26,7 +30,9 @@ private:
     Suit  suit{SPADES};
 };
 
+/** @brief Hand - a pair of cards using utility:pair */
 typedef pair<Card, Card> Hand;
+
 const int DEFAULT_DECK_SIZE = 52;
 
 class Deck
@@ -53,7 +59,7 @@ public:
     void showRiver();
 
     void reset();
-    //void dealAll(QVector<*Player> players);
+    void dealAll(QVector<Player*> players);
 
 private:
     QVector<Card> cardsInPlay;

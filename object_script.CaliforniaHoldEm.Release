@@ -1,0 +1,11 @@
+release/main.o
+release/mainwindow.o
+release/house.o
+release/person.o
+release/player.o
+release/game.o
+release/database.o
+release/qrc_resources.o
+release/moc_mainwindow.o
+release/moc_person.o
+release/moc_game.o

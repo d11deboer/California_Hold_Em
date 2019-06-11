@@ -13,7 +13,7 @@ public:
     inline virtual QString getFullName()    {return firstName + " " + lastName;}
     inline virtual QString getCatchPhrase() {return catchphrase;}
     virtual QString getRole() = 0;
-    virtual void setInfo() = 0;
+    virtual void    setInfo() = 0;
 protected:
     QString firstName;
     QString lastName;

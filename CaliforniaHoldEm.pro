@@ -29,13 +29,17 @@ SOURCES += \
         mainwindow.cpp \
     house.cpp \
     person.cpp \
-    player.cpp
+    player.cpp \
+    game.cpp \
+    database.cpp
 
 HEADERS += \
         mainwindow.h \
     house.h \
     person.h \
-    player.h
+    player.h \
+    game.h \
+    database.h
 
 FORMS += \
         mainwindow.ui
@@ -44,3 +48,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc
